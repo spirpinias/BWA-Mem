@@ -1,4 +1,4 @@
-# hash:sha256:39f864563dcd0c4c77bd804bb789bea25c1dd60f716cdc5fd6a89a700312006a
+# hash:sha256:60fdbe165d5311768d6d02faa116c178746d6a5e6382f192ce7106eb4cb8b7ce
 FROM registry.apps.codeocean.com/codeocean/jupyterlab:3.4.4-miniconda4.12.0-python3.9-ubuntu20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -9,11 +9,11 @@ COPY git-askpass /
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        samtools \
+        samtools=1.10-3 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN conda install -y --channel=bioconda \
-        bwa \
+        bwa==0.7.15 \
     && conda clean -ya
 
 COPY postInstall /
