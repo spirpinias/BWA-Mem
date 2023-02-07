@@ -56,7 +56,7 @@ Along with the required index.
 
 ## Output
 
-- In your **results** folder you will find your .bam alignment file.
+- In your **results** folder you will find your .bam alignment file with prefix same as sequencing files.
 
 ## Source
 
