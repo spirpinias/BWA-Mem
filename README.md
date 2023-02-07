@@ -16,12 +16,31 @@ For all the algorithms, BWA first needs to construct the FM-index for the refere
 ## Input
 
 - Single or paired end sequencing files in .fastq.gz format.
-- Index generated from the BWA-Index Capsule. 
-
+- Index generated from the BWA-Index Capsule.
+- Capsule can align 1 (single end) or 2(paired) sequencing files, respectively. 
+- If you have multiple single ended or paired end sequencing files. Please migrate your workflow over to pipeline and leverage our pipeline UI.
+ 
 ## Usage
 
-This capsule requires an indexed genome from it's associated capsule BWA-Index. 
-Please see to this capsule prior to the usage of this aligner. Otherwise, the aligner will not work. 
+In the case of single ended data. 
+
+- SequencingFiles
+   - fake.fastq.gz
+
+In the case of paired end data. 
+
+- SequencingFiles
+   -fake_R1.fastq.gz
+   -fake_R2.fastq.gz
+
+Along with the required index.
+
+- Index
+   - fake.amb
+   - fake.ann
+   - fake.bwt
+   - fake.pac
+   - fake.sa
 
 ## Source
 
