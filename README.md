@@ -8,8 +8,8 @@ For all the algorithms, BWA first needs to construct the FM-index for the refere
 
 ## Features
 
-- Searches your environment for the BWA Index.
-- Searches your environment for single or paired end sequencing files.
+- Searches your **data** for the BWA Index.
+- Searches your **data** for single or paired end sequencing files.
 - Performs a genomic alignment with relatively baseline parameters.
 
 This implementation is designed as a tutorial. From the App Panel you will recognize limited number of parameters for the sake of demonstration. If you should decide you want to introduce additional arguments, you can duplicate this capsule into your environment to customize the config.sh and associated App Panel with all functionality you deem necessary for your analysis.
