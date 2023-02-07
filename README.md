@@ -51,7 +51,7 @@ Along with the required index.
    - In the event of Paired End - SampleA_R1.fastq.gz SampleA_R2.fastq.gz
       - Use Forward - "_R1.fastq.gz" and Reverse - "_R2.fastq.gz"
 
-- Minimum Mapping Quality is an integer > 0 for any read aligned with quality less than this value will not be aligned.
+- Minimum Mapping Quality is an integer > 0 for any read aligned with quality less than this value will not be accepted.
 - Verbosity refers to the amount of chatter coming from BWA. 
 
 ## Output
