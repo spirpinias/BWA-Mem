@@ -14,10 +14,6 @@ For all the algorithms, BWA first needs to construct the FM-index for the refere
 
 This implementation is designed as a tutorial. From the App Panel you will recognize limited number of parameters for the sake of demonstration. If you should decide you want to introduce additional arguments, you can duplicate this capsule into your environment to customize the config.sh and associated App Panel with all functionality you deem necessary for your analysis.
 
-## Installation
-
-The latest version of BWA has been downloaded via the package managers bioconda. You do not have to install anything else. Please see to the Environment for the exact version being used in this Capsule.
-
 ## Usage
 
 This capsule requires an indexed genome from it's associated capsule BWA-Index. 
