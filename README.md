@@ -18,7 +18,7 @@ For all the algorithms, BWA first needs to construct the FM-index for the refere
 - Single or paired end sequencing files in .fastq.gz format.
 - Index generated from the BWA-Index Capsule.
 - Capsule can align 1 (single end) or 2(paired) sequencing files, respectively. 
-- If you have multiple single ended or paired end sequencing files. Please migrate your workflow over to pipeline and leverage our pipeline UI.
+- If you have multiple single ended or paired end sequencing files. Please migrate your workflow over to pipeline and leverage our UI.
  
 ## Usage
 
