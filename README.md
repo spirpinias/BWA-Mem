@@ -1,4 +1,5 @@
 # BWA 
+
 ## Genomic Aligner
 
 BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to 1Mbp. BWA-MEM and BWA-SW share similar features such as long-read support and split alignment, but BWA-MEM, which is the latest, is generally recommended for high-quality queries as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
@@ -12,7 +13,10 @@ For all the algorithms, BWA first needs to construct the FM-index for the refere
 - Searches your **data** for single or paired end sequencing files.
 - Performs a genomic alignment with relatively baseline parameters.
 
-This implementation is designed as a tutorial. From the App Panel you will recognize limited number of parameters for the sake of demonstration. If you should decide you want to introduce additional arguments, you can duplicate this capsule into your environment to customize the config.sh and associated App Panel with all functionality you deem necessary for your analysis.
+## Input
+
+- Single or paired end sequencing files in .fastq.gz format.
+- Index generated from the BWA-Index Capsule. 
 
 ## Usage
 
