@@ -25,22 +25,38 @@ For all the algorithms, BWA first needs to construct the FM-index for the refere
 In the case of single ended data. 
 
 - SequencingFiles
-   - fake.fastq.gz
+   - sampleA_R1.fastq.gz
 
 In the case of paired end data. 
 
 - SequencingFiles
-   -fake_R1.fastq.gz
-   -fake_R2.fastq.gz
+   - sampleA_R1.fastq.gz
+   - sampleA_R2.fastq.gz
 
 Along with the required index.
 
 - Index
-   - fake.amb
-   - fake.ann
-   - fake.bwt
-   - fake.pac
-   - fake.sa
+   - sampleA.amb
+   - sampleA.ann
+   - sampleA.bwt
+   - sampleA.pac
+   - sampleA.sa
+
+## Parameters 
+
+- Choose your number of threads, if none selected default is all available on the machine. 
+- Pattern of the forward and reverse read matching suffix and file extention of your sequencing file. 
+   - In the event of Single End - SampleA_R1.fastq.gz
+      - Use Forward - "_R1.fastq.gz"
+   - In the event of Paired End - SampleA_R1.fastq.gz SampleA_R2.fastq.gz
+      - Use Forward - "_R1.fastq.gz" and Reverse - "_R2.fastq.gz"
+
+- Minimum Mapping Quality is an integer > 0 by whichs with alignment quality less than this value will not be aligned.
+- Verbosity refers to the amount of chatter coming from BWA. 
+
+## Output
+
+- In your **results** folder you will find your .bam alignment file.
 
 ## Source
 
