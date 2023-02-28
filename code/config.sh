@@ -11,35 +11,40 @@ else
 fi
 
 # BWA
-
 some_fastq=$(find -L ../data -name "*.fastq.gz" | head -1)
 
 if [ -z "${1}" ]; then
-  num_thread=$(get_cpu_count.py)
+  bwa_algorithm="mem"
 else
-  num_thread="${1}"
+  bwa_algorithm="${1}"
 fi
 
 if [ -z "${2}" ]; then
-  pattern_fwd="_$(get_read_pattern.py "$some_fastq" "1")"
+  num_thread=$(get_cpu_count.py)
 else
-  pattern_fwd="${2}"
+  num_thread="${2}"
 fi
 
 if [ -z "${3}" ]; then
-  pattern_rev="_$(get_read_pattern.py "$some_fastq" "2")"
+  pattern_fwd="_$(get_read_pattern.py "$some_fastq" "1")"
 else
-  pattern_rev="${3}"
+  pattern_fwd="${3}"
 fi
 
 if [ -z "${4}" ]; then
-  align_score=25
+  pattern_rev="_$(get_read_pattern.py "$some_fastq" "2")"
 else
-  align_score="${4}"
+  pattern_rev="${4}"
 fi
 
 if [ -z "${5}" ]; then
+  align_score=25
+else
+  align_score="${5}"
+fi
+
+if [ -z "${6}" ]; then
   verbosity=1
 else
-  verbosity="${5}"
+  verbosity="${6}"
 fi
