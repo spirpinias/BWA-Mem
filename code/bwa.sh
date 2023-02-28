@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
 source ./config.sh
+source ./utils.sh
 
-file_count=$(find -L ../data -name "*.fastq.gz" | wc -l)
+input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
+
+file_count=$(find -L ../data -name "*$pattern_fwd" | wc -l)
 index_file_count=$(find -L ../data -name "*.amb" | wc -l)
+
+echo "Using threads: $num_threads"
+echo "Input R1 Fastqs: $input_fwd_fastqs"
 
 if [ "$index_file_count" -eq 1 ];
 then

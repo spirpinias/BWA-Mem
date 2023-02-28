@@ -13,10 +13,9 @@ fi
 # BWA
 
 some_fastq=$(find -L ../data -name "*.fastq.gz" | head -1)
-cores=$(get_cpu_count.py)
 
 if [ -z "${1}" ]; then
-  num_thread=$((cores * 2))
+  num_thread=$(get_cpu_count.py)
 else
   num_thread="${1}"
 fi
