@@ -24,11 +24,14 @@ Minimum Mapping Quality
 Verbosity
 - Amount of logging info from BWA. 0 outputs nothing, 1 outputs errors, 2 for warnings and errors and 4 or higher for debugging. 4 will not output alignments. 
 
+Sort and index
+- Sort and index bam file after alignment using sambamba.
+
 ## Output
 
 **.bam**: Output alignments
 
-
+**.bam.bai**: Output index (if chosen)
 
 <hr>
 
