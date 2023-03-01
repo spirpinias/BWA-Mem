@@ -1,5 +1,5 @@
-# hash:sha256:60fdbe165d5311768d6d02faa116c178746d6a5e6382f192ce7106eb4cb8b7ce
-FROM registry.apps.codeocean.com/codeocean/jupyterlab:3.4.4-miniconda4.12.0-python3.9-ubuntu20.04
+# hash:sha256:213dcce1ecfac0e70046c31654736829e6234db286c74d4f89b7dd44ee0f73bb
+FROM registry.apps.codeocean.com/codeocean/miniconda3:22.11.1
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -9,11 +9,16 @@ COPY git-askpass /
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        samtools=1.10-3 \
+        ca-certificates=20210119 \
+        git=1:2.30.2-1+deb11u2 \
+        samtools=1.11-1 \
     && rm -rf /var/lib/apt/lists/*
 
+RUN conda install -y \
+        conda==23.1.0 \
+    && conda clean -ya
 RUN conda install -y --channel=bioconda \
-        bwa==0.7.15 \
+        bwa==0.7.17 \
     && conda clean -ya
 
 COPY postInstall /
