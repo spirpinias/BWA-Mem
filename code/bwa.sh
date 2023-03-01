@@ -8,7 +8,7 @@ input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
 file_count=$(find -L ../data -name "*$pattern_fwd" | wc -l)
 index_file_count=$(find -L ../data -name "*.amb" | wc -l)
 
-echo "Using threads: $num_threads"
+echo "Using threads: $num_thread"
 echo "Input R1 Fastqs: $input_fwd_fastqs"
 
 if [ "$index_file_count" -ne 1 ];
