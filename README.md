@@ -26,7 +26,9 @@ Verbosity
 
 ## Output
 
-- In your **results** folder you will find your .bam alignment file with prefix same as sequencing files.
+**.bam**: Output alignments
+
+
 
 <hr>
 
