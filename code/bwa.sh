@@ -34,6 +34,7 @@ do
     echo "Running in single end mode"
     read_files="$input_fwd_fastq"
   else
+    echo "Running in paired end mode."
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
 
