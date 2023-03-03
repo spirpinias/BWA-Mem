@@ -138,7 +138,7 @@ else
 fi
 
 if [ "${20}" == "True" ]; then
-  o4='a'
+  o4='S'
 else
   o4=''
 fi
