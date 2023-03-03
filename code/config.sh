@@ -126,30 +126,18 @@ else
 fi
 
 if [ "${18}" == "True" ]; then
-  o2='C'
-else
-  o2=''
-fi
-
-if [ "${19}" == "True" ]; then
-  o3=H
-else
-  o3=''
-fi
-
-if [ "${20}" == "True" ]; then
   o4='M'
 else
   o4=''
 fi
 
-if [ "${21}" == "True" ]; then
+if [ "${19}" == "True" ]; then
   o5='p'
 else
   o5=''
 fi
 
-if [ "${22}" == "True" ]; then
+if [ "${20}" == "True" ]; then
   o6='P'
 else
   o6=''
