@@ -52,3 +52,27 @@ if [ -z "${5}" ]; then
 else
   verbosity="${5}"
 fi
+
+if [ -z "${6}" ]; then
+  min_seed_len=19
+else
+  min_seed_len="${6}"
+fi
+
+if [ -z "${7}" ]; then
+  band_width=100
+else
+  band_width="${7}"
+fi
+
+if [ -z "${8}" ]; then
+  z_dropoff=100
+else
+  z_dropoff="${8}"
+fi
+
+if [ -z "${9}" ]; then
+  seed_split_ratio=1.5
+else
+  seed_split_ratio="${9}"
+fi
