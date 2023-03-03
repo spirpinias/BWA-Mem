@@ -130,3 +130,9 @@ if [ "${18}" == "True" ]; then
 else
   o2=''
 fi
+
+if [ "${19}" == "True" ]; then
+  o3='Y'
+else
+  o3=''
+fi
