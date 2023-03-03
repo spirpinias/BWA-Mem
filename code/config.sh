@@ -106,3 +106,9 @@ if [ -z "${14}" ]; then
 else
   gap_ext_pen="${14}"
 fi
+
+if [ -z "${15}" ]; then
+  clip_pen=5
+else
+  clip_pen="${15}"
+fi
