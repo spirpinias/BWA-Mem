@@ -18,11 +18,54 @@ In **data** directory, tool searches for *.fastq.gz files. If a reference direct
 Threads
 - Number of threads used by BWA. If not specified, will use all available. 
 
+Pattern Forward
+- The unique suffix to identify your forward. 
+
+Pattern Reverse
+- The unique suffix to identify your reverse.
+
 Minimum Mapping Quality
 - An integer > 0 for any read aligned with quality less than this value will not be accepted.
 
 Verbosity
 - Amount of logging info from BWA. 0 outputs nothing, 1 outputs errors, 2 for warnings and errors and 4 or higher for debugging. 4 will not output alignments. 
+
+Minimum Seed Leng 
+- Matches shorter than INT will be missed.
+
+Band Width 
+- Essentially, gaps longer than INT will not be found.
+
+Drop Off 
+- top extension when the difference between the best and the current extension score is above |i-j|*A+INT, where i and j are the current positions of the query and reference, respectively, and A is the matching score.
+
+Seed Split Ratio
+- Larger value yields fewer seeds, which leads to faster alignment speed but lower accuracy.
+
+Discard Reads if More than INT Occurences
+- Removes redundant reads.
+
+Matching Score 
+- 
+
+Mismatch Penalty 
+- Penalizes from poor alignments
+
+Gap Open Penalty
+- Price paid for opening a gap between two reads.
+
+Gap Extension Penalty 
+- Price paid for extending a gap between two reads.
+
+Clipping Penalty 
+- When performing SW extension, BWA-MEM keeps track of the best score reaching the end of query. If this score is larger than the best SW score minus the clipping penalty, clipping will not be applied.
+
+Penalty for Unpaired Read Pair 
+- BWA-MEM scores an unpaired read pair as scoreRead1+scoreRead2-INT and scores a paired as scoreRead1+scoreRead2-insertPenalty. It compares these two scores to determine whether we should force pairing.
+
+## Source 
+
+https://bio-bwa.sourceforge.net/bwa.shtml
 
 ## Output
 
