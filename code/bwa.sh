@@ -25,7 +25,7 @@ do
     echo "Running in paired end mode."
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
-
-  bwa mem -M -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
+  
+  bwa mem $(echo $o1o2o3o4o5o6) -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
 done
   
