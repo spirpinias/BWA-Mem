@@ -26,7 +26,7 @@ do
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
 
-  flags=$(echo $o1$o2$o3)
+  flags=$(echo $o1$o2$o3$o4)
   flag_count=$(echo $flags | wc -w)
 
   if [ $flag_count -gt 0 ];
