@@ -27,7 +27,7 @@ do
   fi
 
   flags=$(echo $o1$o2)
-  flag_count=$(echo $flags | wc -c)
+  flag_count=$(echo $flags | wc -w)
 
   if [ $flag_count -gt 0 ];
   then
