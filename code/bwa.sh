@@ -26,6 +26,6 @@ do
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
 
-  bwa $bwa_algorithm -M -t "$num_thread" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
+  bwa mem -M -t "$num_thread" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
 done
   
