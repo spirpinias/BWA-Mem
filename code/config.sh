@@ -76,3 +76,15 @@ if [ -z "${9}" ]; then
 else
   seed_split_ratio="${9}"
 fi
+
+if [ -z "${10}" ]; then
+  max_occ=10000
+else
+  max_occ="${10}"
+fi
+
+if [ -z "${11}" ]; then
+  match_score=1
+else
+  match_score="${11}"
+fi
