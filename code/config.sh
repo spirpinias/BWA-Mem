@@ -88,3 +88,15 @@ if [ -z "${11}" ]; then
 else
   match_score="${11}"
 fi
+
+if [ -z "${12}" ]; then
+  mm_penalty=4
+else
+  mm_penalty="${12}"
+fi
+
+if [ -z "${13}" ]; then
+  gap_open_pen=4
+else
+  gap_open_pen="${13}"
+fi
