@@ -32,7 +32,7 @@ else
 fi
 
 input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
-file_count=$(find -L ../data -name "*$pattern_fwd" | wc -l)
+file_count=$(echo $input_fwd_fastqs | wc -w)
 index_file_count=$(find -L ../data -name "*.amb" | wc -l)
 
 if [ -z "${3}" ]; then
