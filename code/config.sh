@@ -124,3 +124,9 @@ if [ "${17}" == "True" ]; then
 else
   o1=''
 fi
+
+if [ "${18}" == "True" ]; then
+  o2='M'
+else
+  o2=''
+fi
