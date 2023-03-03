@@ -33,7 +33,7 @@ fi
 
 input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
 file_count=$(echo $input_fwd_fastqs | wc -w)
-index_file_count=$(find -L ../data -name "*.amb" | wc -l)
+index_file_count=$(echo $index_file | wc -w)
 
 if [ -z "${3}" ]; then
   pattern_rev="_$(get_read_pattern.py "$some_fastq" "2")"
