@@ -120,13 +120,13 @@ else
 fi
 
 if [ "${17}" == "True" ]; then
-  o1=a
+  o1='a'
 else
   o1=''
 fi
 
 if [ "${18}" == "True" ]; then
-  o2=C
+  o2='C'
 else
   o2=''
 fi
