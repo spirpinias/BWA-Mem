@@ -132,7 +132,7 @@ else
 fi
 
 if [ "${19}" == "True" ]; then
-  o3='H'
+  o3='q'
 else
   o3=''
 fi
@@ -144,9 +144,9 @@ else
 fi
 
 if [ "${21}" == "True" ]; then
-  o5='p'
+  o4='S'
 else
-  o5=''
+  o4=''
 fi
 
 if [ "${22}" == "True" ]; then
