@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ $# -eq 0 ]; then
-    echo "No arguments supplied"
+  echo "No arguments supplied"
 else
   echo "args:"
   for i in $*; do 
@@ -10,26 +10,36 @@ else
   echo ""
 fi
 
-# BWA
-some_fastq=$(find -L ../data -name "*.fastq.gz" | head -1)
+# Find the Index Prefix
+index_file=$(find -L ../data -name "*.amb")
+index_file_name=$(basename -s .amb $index_file)
+
+# Get the Path for the Index.
+index_dir_name=$(dirname $index_file)
 
 if [ -z "${1}" ]; then
-  bwa_algorithm="mem"
+  num_thread=$(get_cpu_count.py)
 else
-  bwa_algorithm="${1}"
+  num_thread="${1}"
 fi
 
 if [ -z "${2}" ]; then
-  num_thread=$(get_cpu_count.py)
+  bwa_algorithm="mem"
 else
-  num_thread="${2}"
+  bwa_algorithm="${2}"
 fi
+
+some_fastq=$(find -L ../data -name "*.fastq.gz" | head -1)
 
 if [ -z "${3}" ]; then
   pattern_fwd="_$(get_read_pattern.py "$some_fastq" "1")"
 else
   pattern_fwd="${3}"
 fi
+
+input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
+file_count=$(find -L ../data -name "*$pattern_fwd" | wc -l)
+index_file_count=$(find -L ../data -name "*.amb" | wc -l)
 
 if [ -z "${4}" ]; then
   pattern_rev="_$(get_read_pattern.py "$some_fastq" "2")"
@@ -48,4 +58,3 @@ if [ -z "${6}" ]; then
 else
   verbosity="${6}"
 fi
-
