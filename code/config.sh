@@ -23,38 +23,32 @@ else
   num_thread="${1}"
 fi
 
-if [ -z "${2}" ]; then
-  bwa_algorithm="mem"
-else
-  bwa_algorithm="${2}"
-fi
-
 some_fastq=$(find -L ../data -name "*.fastq.gz" | head -1)
 
-if [ -z "${3}" ]; then
+if [ -z "${2}" ]; then
   pattern_fwd="_$(get_read_pattern.py "$some_fastq" "1")"
 else
-  pattern_fwd="${3}"
+  pattern_fwd="${2}"
 fi
 
 input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
 file_count=$(find -L ../data -name "*$pattern_fwd" | wc -l)
 index_file_count=$(find -L ../data -name "*.amb" | wc -l)
 
-if [ -z "${4}" ]; then
+if [ -z "${3}" ]; then
   pattern_rev="_$(get_read_pattern.py "$some_fastq" "2")"
 else
-  pattern_rev="${4}"
+  pattern_rev="${3}"
+fi
+
+if [ -z "${4}" ]; then
+  align_score=25
+else
+  align_score="${4}"
 fi
 
 if [ -z "${5}" ]; then
-  align_score=25
-else
-  align_score="${5}"
-fi
-
-if [ -z "${6}" ]; then
   verbosity=1
 else
-  verbosity="${6}"
+  verbosity="${5}"
 fi
