@@ -112,3 +112,9 @@ if [ -z "${15}" ]; then
 else
   clip_pen="${15}"
 fi
+
+if [ -z "${16}" ]; then
+  unpair_pen=9
+else
+  unpair_pen="${16}"
+fi
