@@ -26,12 +26,12 @@ do
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
 
-  flags=$(echo -$o1$o2)
+  flags=$(echo $o1$o2)
   flag_count=$(echo $flags | wc -c)
 
   if [ $flag_count -gt 0 ];
   then
-    bwa mem $flags -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
+    bwa mem -$flags -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
   else
     bwa mem -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
   fi
