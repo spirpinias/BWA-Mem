@@ -1,5 +1,5 @@
 metadata_version: 1
-name: BWA
+name: BWA-Mem
 description: |-
   BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for short read sequences (i.e. Illumina), while the other two for longer sequences up to 1Mbp.
 
