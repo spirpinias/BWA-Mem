@@ -100,3 +100,9 @@ if [ -z "${13}" ]; then
 else
   gap_open_pen="${13}"
 fi
+
+if [ -z "${14}" ]; then
+  gap_ext_pen=1
+else
+  gap_ext_pen="${14}"
+fi
