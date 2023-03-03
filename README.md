@@ -46,7 +46,7 @@ Discard Reads if More than INT Occurences
 - Removes redundant reads.
 
 Matching Score 
-- 
+- Award for finding a match.
 
 Mismatch Penalty 
 - Penalizes from poor alignments
