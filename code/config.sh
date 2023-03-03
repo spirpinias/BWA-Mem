@@ -118,3 +118,39 @@ if [ -z "${16}" ]; then
 else
   unpair_pen="${16}"
 fi
+
+if [ -z "${17}" == "True"]; then
+  o1=a
+else
+  o1=''
+fi
+
+if [ -z "${18}" == "True"]; then
+  o2=C
+else
+  o2=''
+fi
+
+if [ -z "${19}" == "True"]; then
+  o3=H
+else
+  o3=''
+fi
+
+if [ -z "${20}" == "True" ]; then
+  o4='M'
+else
+  o4=''
+fi
+
+if [ -z "${21}" == "True"]; then
+  o5='p'
+else
+  o5=''
+fi
+
+if [ -z "${22}" == "True"]; then
+  o6='P'
+else
+  o6=''
+fi
