@@ -138,3 +138,9 @@ if [ "${19}" == "True" ]; then
 else
   soft_clipping=''
 fi
+
+if [ "${20}" == "True" ]; then
+  skip_mate_rescue='-Y'
+else
+  skip_mate_rescue=''
+fi
