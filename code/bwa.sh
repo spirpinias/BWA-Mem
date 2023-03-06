@@ -1,5 +1,7 @@
   #!/usr/bin/env bash
 
+set -ex
+
 source ./config.sh
 source ./utils.sh
 
@@ -44,8 +46,6 @@ do
   $output_all \
   $mark_short_secondary \
   $hard_clipping \
-  "${index_dir_name}/${index_file_name}" \ 
-  $read_files | samtools view -b - > ../results/"$file_prefix".bam
-  $
+  "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
 
 done

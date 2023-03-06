@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 if [ $# -eq 0 ]; then
   echo "No arguments supplied"
 else
@@ -60,7 +62,7 @@ else
 fi
 
 if [ -z "${7}" ]; then
-  band_width=100
+  band_width=""
 else
   band_width="-w ${7}"
 fi
