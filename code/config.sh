@@ -56,89 +56,89 @@ fi
 if [ -z "${6}" ]; then
   min_seed_len=""
 else
-  min_seed_len="${6}"
+  min_seed_len="-k ${6}"
 fi
 
 if [ -z "${7}" ]; then
   band_width=100
 else
-  band_width="${7}"
+  band_width="-w ${7}"
 fi
 
 if [ -z "${8}" ]; then
-  z_dropoff=100
+  z_dropoff=""
 else
-  z_dropoff="${8}"
+  z_dropoff="-d ${8}"
 fi
 
 if [ -z "${9}" ]; then
-  seed_split_ratio=1.5
+  seed_split_ratio=""
 else
-  seed_split_ratio="${9}"
+  seed_split_ratio="-r ${9}"
 fi
 
 if [ -z "${10}" ]; then
-  max_occ=10000
+  max_occ=""
 else
-  max_occ="${10}"
+  max_occ="-c ${10}"
 fi
 
 if [ -z "${11}" ]; then
-  match_score=1
+  match_score=""
 else
-  match_score="${11}"
+  match_score="-A ${11}"
 fi
 
 if [ -z "${12}" ]; then
-  mm_penalty=4
+  mm_penalty=""
 else
-  mm_penalty="${12}"
+  mm_penalty="-B ${12}"
 fi
 
 if [ -z "${13}" ]; then
-  gap_open_pen=4
+  gap_open_pen=""
 else
-  gap_open_pen="${13}"
+  gap_open_pen="-O ${13}"
 fi
 
 if [ -z "${14}" ]; then
-  gap_ext_pen=1
+  gap_ext_pen=""
 else
-  gap_ext_pen="${14}"
+  gap_ext_pen="-E ${14}"
 fi
 
 if [ -z "${15}" ]; then
-  clip_pen=5
+  clip_pen=""
 else
-  clip_pen="${15}"
+  clip_pen="-L ${15}"
 fi
 
 if [ -z "${16}" ]; then
-  unpair_pen=9
+  unpair_pen=""
 else
-  unpair_pen="${16}"
+  unpair_pen="-U ${16}"
 fi
 
 if [ "${17}" == "True" ]; then
-  o1='a'
+  output_all='a'
 else
-  o1=''
+  output_all=''
 fi
 
 if [ "${18}" == "True" ]; then
-  o2='M'
+  mark_short_secondary='-M'
 else
-  o2=''
+  mark_short_secondary=''
 fi
 
 if [ "${19}" == "True" ]; then
-  o3='Y'
+  hard_clipping='-H'
 else
-  o3=''
+  hard_clipping=''
 fi
 
 if [ "${20}" == "True" ]; then
-  o4='S'
+  skip_mate_rescue='-S'
 else
-  o4=''
+  skip_mate_rescue=''
 fi

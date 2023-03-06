@@ -26,10 +26,7 @@ do
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
 
-  flags=$(echo $output_all$mark_short_secondary$soft_clipping$skip_mate_rescue)
-  flags=$(echo -$flags)
-
-  bwa mem $flags \
+  bwa mem \
   -t "$num_thread" \
   $align_score_min \
   $verbosity \
@@ -46,5 +43,6 @@ do
   $unpair_pen \
   "${index_dir_name}/${index_file_name}" \ 
   $read_files | samtools view -b - > ../results/"$file_prefix".bam
+  
 
 done

@@ -65,6 +65,19 @@ Clipping Penalty
 Penalty for Unpaired Read Pair 
 - BWA-MEM scores an unpaired read pair as scoreRead1+scoreRead2-INT and scores a paired as scoreRead1+scoreRead2-insertPenalty. It compares these two scores to determine whether we should force pairing.
 
+
+Output all found alignments for single-end or unpaired paired-end reads.
+- Include all alignments rather than highest scoring
+
+Mark Shorter Split Hits as Secondary
+- Necessary for Picard compatibility. 
+
+Use Hard Clipping for Supplementary Alignments
+- Use hard clipping in the output. This option may dramatically reduce the redundancy of output when mapping long contig or BAC sequences, however will interfere with some structural variant callers. 
+
+Skip Mate Rescue
+- 
+
 ## Source 
 
 https://bio-bwa.sourceforge.net/bwa.shtml
