@@ -45,7 +45,7 @@ do
   $unpair_pen \
   $output_all \
   $mark_short_secondary \
-  $hard_clipping \
+  $soft_clipping \
   "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
 
 done

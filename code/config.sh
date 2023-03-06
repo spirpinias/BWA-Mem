@@ -134,7 +134,7 @@ else
 fi
 
 if [ "${19}" == "True" ]; then
-  hard_clipping='-Y'
+  soft_clipping='-Y'
 else
-  hard_clipping=''
+  soft_clipping=''
 fi
