@@ -6,7 +6,7 @@
 
 BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. BWA-MEM, which is the latest, is generally recommended for high-quality queries as it is faster and more accurate than other BWA alignment algorithms. 
 
-BWA first needs to construct the FM-index for the reference genome (the index command).
+BWA first needs to construct the FM-index for the reference genome (the index command). See [associated capsule](https://apps.codeocean.com/capsule/9591214)
 
 It is important to note that the BWA documentation online is not always up to date with the current parameters. The help text can be found [here](bwa_help_text.txt)
 
@@ -85,7 +85,7 @@ Skip Pairing
 
 ## Source 
 
-https://bio-bwa.sourceforge.net/bwa.shtml
+https://github.com/lh3/bwa
 
 ## Output
 
