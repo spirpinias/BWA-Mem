@@ -26,14 +26,25 @@ do
     read_files="$input_fwd_fastq $input_rev_fastq"
   fi
 
-  flags=$(echo $o1$o2$o3$o4)
-  flag_count=$(echo $flags | wc -w)
+  flags=$(echo $output_all$mark_short_secondary$soft_clipping$skip_mate_rescue)
+  flags=$(echo -$flags)
 
-  if [ $flag_count -gt 0 ];
-  then
-    bwa mem -$flags -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
-  else
-    bwa mem -t "$num_thread" -k "${min_seed_len}" -w "${band_width}" -d "${z_dropoff}" -r "${seed_split_ratio}" -c "${max_occ}" -A "${match_score}" -E "${gap_ext_pen}" -O "${gap_open_pen}" -B "${mm_penalty}" -L "${clip_pen}" -U "${unpair_pen}" -T "$align_score" -v "$verbosity" "${index_dir_name}/${index_file_name}" $read_files | samtools view -b - > ../results/"$file_prefix".bam
-  fi
+  bwa mem $flags \
+  -t "$num_thread" \
+  $align_score_min \
+  $verbosity \
+  $min_seed_len \
+  $band_width \
+  $z_dropoff \
+  $seed_split_ratio \
+  $max_occ \
+  $match_score \
+  $mm_penalty \
+  $gap_open_pen \
+  $gap_ext_pen \
+  $clip_pen \
+  $unpair_pen \
+  "${index_dir_name}/${index_file_name}" \ 
+  $read_files | samtools view -b - > ../results/"$file_prefix".bam
 
 done

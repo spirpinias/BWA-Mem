@@ -42,19 +42,19 @@ else
 fi
 
 if [ -z "${4}" ]; then
-  align_score=25
+  align_score_min=""
 else
-  align_score="${4}"
+  align_score_min="-T ${4}"
 fi
 
 if [ -z "${5}" ]; then
-  verbosity=1
+  verbosity=""
 else
-  verbosity="${5}"
+  verbosity="-v ${5}"
 fi
 
 if [ -z "${6}" ]; then
-  min_seed_len=19
+  min_seed_len=""
 else
   min_seed_len="${6}"
 fi

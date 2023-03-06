@@ -4,17 +4,16 @@
 
 # BWA - Mem
 
-BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to 1Mbp. BWA-MEM, which is the latest, is generally recommended for high-quality queries as it is faster and more accurate.
+BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. BWA-MEM, which is the latest, is generally recommended for high-quality queries as it is faster and more accurate than other BWA alignment algorithms. 
 
-For all the algorithms, BWA first needs to construct the FM-index for the reference genome (the index command). Alignment algorithms are invoked with different sub-commands: aln/samse/sampe for BWA-backtrack, bwasw for BWA-SW and mem for the BWA-MEM algorithm.
-
+BWA first needs to construct the FM-index for the reference genome (the index command).
 
 ## Input data
 
 In **data** directory, tool searches for *.fastq.gz files. If a reference directory is not supplied, it is inferred by the location of \*.amb. 
 
 ## Parameters 
-
+### Main Parameters
 Threads
 - Number of threads used by BWA. If not specified, will use all available. 
 
@@ -24,20 +23,23 @@ Pattern Forward
 Pattern Reverse
 - The unique suffix to identify your reverse.
 
+## Auxiliary Parameters
+*Note:* It is unlikely you will need to adjust these parameters.  
+
 Minimum Mapping Quality
 - An integer > 0 for any read aligned with quality less than this value will not be accepted.
 
 Verbosity
 - Amount of logging info from BWA. 0 outputs nothing, 1 outputs errors, 2 for warnings and errors and 4 or higher for debugging. 4 will not output alignments. 
 
-Minimum Seed Leng 
-- Matches shorter than INT will be missed.
+Minimum Seed Length
+- Matches shorter than this parameter will be missed.
 
-Band Width 
-- Essentially, gaps longer than INT will not be found.
+Bandwidth 
+- Gaps longer than this parameter will be missed
 
 Drop Off 
-- top extension when the difference between the best and the current extension score is above |i-j|*A+INT, where i and j are the current positions of the query and reference, respectively, and A is the matching score.
+- Off-diagonal X-dropoff (Z-dropoff). Stop extension when the difference between the best and the current extension score is above |i-j|*A+drop off, where i and j are the current positions of the query and reference, respectively, and A is the matching score.
 
 Seed Split Ratio
 - Larger value yields fewer seeds, which leads to faster alignment speed but lower accuracy.
@@ -46,10 +48,10 @@ Discard Reads if More than INT Occurences
 - Removes redundant reads.
 
 Matching Score 
-- Award for finding a match.
+- Score for matching bp.
 
 Mismatch Penalty 
-- Penalizes from poor alignments
+- Penalty for bp mismatch.
 
 Gap Open Penalty
 - Price paid for opening a gap between two reads.
