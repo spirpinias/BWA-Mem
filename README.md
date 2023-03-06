@@ -78,7 +78,10 @@ Use Soft Clipping for Supplementary Alignments
 - Use soft clipping in the output. Hard clipping may interfere with some structural variant callers. 
 
 Skip Mate Rescue
-- 
+- If one read maps and the other doesn't, BWA attempts to rescue the other read by performing Smith-Waterman alignment with the unmapped mate, this disables mate rescue.
+
+Skip Pairing
+- Skip pairing; mate rescue performed unless "Skip Mate Rescue" also in use. If both Skip Mate and Skip Pairing are set, R1 and R2 are treated as single end reads. 
 
 ## Source 
 

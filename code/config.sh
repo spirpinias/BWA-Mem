@@ -140,7 +140,13 @@ else
 fi
 
 if [ "${20}" == "True" ]; then
-  skip_mate_rescue='-Y'
+  skip_mate_rescue='-S'
+else
+  skip_mate_rescue=''
+fi
+
+if [ "${21}" == "True" ]; then
+  skip_mate_rescue='-P'
 else
   skip_mate_rescue=''
 fi
