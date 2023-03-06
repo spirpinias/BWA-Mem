@@ -74,8 +74,8 @@ Output all found alignments for single-end or unpaired paired-end reads.
 Mark Shorter Split Hits as Secondary
 - Necessary for Picard compatibility. 
 
-Use Hard Clipping for Supplementary Alignments
-- Use hard clipping in the output. This option may dramatically reduce the redundancy of output when mapping long contig or BAC sequences, however will interfere with some structural variant callers. 
+Use Soft Clipping for Supplementary Alignments
+- Use soft clipping in the output. Hard clipping may interfere with some structural variant callers. 
 
 Skip Mate Rescue
 - 
