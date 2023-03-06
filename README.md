@@ -8,6 +8,8 @@ BWA is a software package for mapping low-divergent sequences against a large re
 
 BWA first needs to construct the FM-index for the reference genome (the index command).
 
+It is important to note that the BWA documentation online is not always up to date with the current parameters. The help text can be found [here](bwa_help_text.txt)
+
 ## Input data
 
 In **data** directory, tool searches for *.fastq.gz files. If a reference directory is not supplied, it is inferred by the location of \*.amb. 

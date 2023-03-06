@@ -122,19 +122,19 @@ else
 fi
 
 if [ "${17}" == "True" ]; then
-  output_all='a'
+  output_all='-a'
 else
   output_all=''
 fi
 
 if [ "${18}" == "True" ]; then
-  mark_short_secondary='M'
+  mark_short_secondary='-M'
 else
   mark_short_secondary=''
 fi
 
 if [ "${19}" == "True" ]; then
-  hard_clipping='H'
+  hard_clipping='-Y'
 else
   hard_clipping=''
 fi
