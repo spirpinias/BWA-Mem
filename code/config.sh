@@ -122,7 +122,7 @@ else
 fi
 
 if [ "${17}" == "True" ]; then
-  output_all='a'
+  output_all='-a'
 else
   output_all=''
 fi
