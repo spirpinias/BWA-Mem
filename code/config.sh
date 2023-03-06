@@ -146,7 +146,7 @@ else
 fi
 
 if [ "${21}" == "True" ]; then
-  skip_mate_rescue='-P'
+  skip_pairing='-P'
 else
-  skip_mate_rescue=''
+  skip_pairing=''
 fi
