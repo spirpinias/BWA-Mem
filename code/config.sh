@@ -14,7 +14,15 @@ fi
 
 # Find the Index Prefix
 index_file=$(find -L ../data -name "*.amb")
+index_file_count=$(echo $index_file | wc -w)
+if [ "$index_file_count" -ne 1 ];
+then
+  echo "Please ensure your data directory has contains 1 indexed genome."
+  exit 1
+fi
+
 index_file_name=$(basename -s .amb $index_file)
+
 
 # Get the Path for the Index.
 index_dir_name=$(dirname $index_file)
@@ -35,7 +43,6 @@ fi
 
 input_fwd_fastqs=$(find -L ../data -name "*$pattern_fwd")
 file_count=$(echo $input_fwd_fastqs | wc -w)
-index_file_count=$(echo $index_file | wc -w)
 
 if [ -z "${3}" ]; then
   pattern_rev="_$(get_read_pattern.py "$some_fastq" "2")"

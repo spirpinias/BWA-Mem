@@ -8,12 +8,6 @@ source ./utils.sh
 echo "Using threads: $num_thread"
 echo "Input R1 Fastqs: $input_fwd_fastqs"
 
-if [ "$index_file_count" -ne 1 ];
-then
-  echo "Please ensure your data directory has contains 1 indexed genome."
-  exit 1
-fi
-
 for input_fwd_fastq in $input_fwd_fastqs
 do
   file_prefix=$(sed "s/$pattern_fwd//" <<< $input_fwd_fastq)
