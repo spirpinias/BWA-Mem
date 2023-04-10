@@ -33,7 +33,7 @@ else
   num_thread="${1}"
 fi
 
-some_fastq=$(find -L ../data -name "*.fastq.gz" | head -1)
+some_fastq=$(find -L ../data -name "*.f*q*" | head -1)
 
 if [ -z "${2}" ]; then
   pattern_fwd="_$(get_read_pattern.py "$some_fastq" "1")"
