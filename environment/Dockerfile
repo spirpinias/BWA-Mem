@@ -1,5 +1,5 @@
-# hash:sha256:b16ebe42e9f57a73c91b5d834c4b127073ae6c6cc5705f4e9f9f1e946bcf0025
-FROM registry.apps.codeocean.com/codeocean/mambaforge3:22.11.1-4-python3.10-ubuntu22.04
+# hash:sha256:91945d7535239e9a16d44ffbbce742da25d49ca9c3d587f372e2cbf68bf0df69
+FROM registry.apps.codeocean.com/codeocean/mambaforge3:22.11.1-4-ubuntu22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
