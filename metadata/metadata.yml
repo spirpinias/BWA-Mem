@@ -1,5 +1,5 @@
 metadata_version: 1
-name: BWA-Mem
+name: BWA Mem
 description: |-
   BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.
 
