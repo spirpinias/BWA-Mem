@@ -83,15 +83,19 @@ Skip Mate Rescue
 Skip Pairing
 - Skip pairing; mate rescue performed unless "Skip Mate Rescue" also in use. If both Skip Mate and Skip Pairing are set, R1 and R2 are treated as single end reads. (-P)
 
-## Source 
-
-https://github.com/lh3/bwa
-
 ## Output
 
 **.bam**: Output alignments
 
 **.bam.bai**: Output index (if chosen)
+
+## Source 
+
+https://github.com/lh3/bwa
+
+## Cite
+
+Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID: 19451168]
 
 <hr>
 
