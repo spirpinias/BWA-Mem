@@ -1,7 +1,3 @@
-[![Code Ocean Logo](images/CO_logo_135x72.png)](http://codeocean.com/product)
-
-<hr>
-
 # BWA - Mem
 
 BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. BWA-MEM, which is the latest, is generally recommended for high-quality queries as it is faster and more accurate than other BWA alignment algorithms. 
@@ -96,8 +92,3 @@ https://github.com/lh3/bwa
 ## Cite
 
 Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID: 19451168]
-
-<hr>
-
-[Code Ocean](https://codeocean.com/) is a cloud-based computational platform that aims to make it easy for researchers to share, discover, and run code.<br /><br />
-[![Code Ocean Logo](images/CO_logo_68x36.png)](https://www.codeocean.com)
